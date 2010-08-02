@@ -7,7 +7,7 @@ DebugKit provides a debugging toolbar and enhanced debugging tools for CakePHP a
 Requires the most up to date files of Croogo from the the [repository](http://github.com/croogo/croogo).
 
 * Clone/Copy the files in this directory into `app/plugins/debug_kit`
-* Go to Extensions > Plugins, and activate the plugin.
+* Go to Extensions > Plugins from admin panel, and activate the plugin.
 
 ## Manual Installation
 
