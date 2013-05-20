@@ -144,7 +144,7 @@ class ToolbarComponent extends Component {
  *
  * @return bool
  **/
-	public function initialize($controller) {
+	public function initialize(Controller $controller) {
 		if (!$this->enabled) {
 			$this->_Collection->disable('Toolbar');
 		}
@@ -177,7 +177,7 @@ class ToolbarComponent extends Component {
  *
  * @return bool
  **/
-	public function startup($controller) {
+	public function startup(Controller $controller) {
 		$currentViewClass = $controller->viewClass;
 		$this->_makeViewClass($currentViewClass);
 		$controller->viewClass = 'DebugKit.Debug';
@@ -211,7 +211,7 @@ class ToolbarComponent extends Component {
  *
  * @return void
  **/
-	public function beforeRedirect($controller) {
+	public function beforeRedirect(Controller $controller, $url, $status = NULL, $exit = true) {
 		if (!class_exists('DebugTimer')) {
 			return null;
 		}
@@ -227,7 +227,7 @@ class ToolbarComponent extends Component {
  *
  * @return void
  **/
-	public function beforeRender($controller) {
+	public function beforeRender(Controller $controller) {
 		if (!class_exists('DebugTimer')) {
 			return null;
 		}
